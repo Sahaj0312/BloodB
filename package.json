@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "type": "module",
   "dependencies": {
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
@@ -7,5 +11,9 @@
     "express-openid-connect": "^2.11.0",
     "mongodb": "^4.13.0",
     "mongoose": "^6.8.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
+ 
 }
