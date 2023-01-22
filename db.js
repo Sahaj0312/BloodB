@@ -1,4 +1,5 @@
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
+import mongoose from "mongoose";
 
 const url = `mongodb+srv://yajasmalhotra:shredder0210@cluster0.fwyxegv.mongodb.net/?retryWrites=true&w=majority`;
 

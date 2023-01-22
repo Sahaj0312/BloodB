@@ -9,5 +9,10 @@ const userSchema = new Schema({
     userPhone: String,
     userBloodType: String,
     userDistance: Number,
-    userVisits: { type: Number, default: 0 }
-})
+    },
+    {
+    collection: 'BludBud.users'
+    });
+
+const User = mongoose.model('User', userSchema);
+export default User;
