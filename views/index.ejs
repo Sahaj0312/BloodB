@@ -20,17 +20,15 @@
             <li class="active"><a href="/">Home</a></li>
             <li><a href="/login/">Login</a></li>
             <% } else { %> 
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="/">Home</a></li>
             <li><a href="/logout/">Logout</a></li>
             <% } %>
-            <li><a href="/donor">Request a Donor</a></li>
           </ul>
         </div>
         
       </nav>
-      <% if(isAuthenticated) { %>
-        <div align="center">
-        <form action="/thankYou" method="POST">
+        <div id="formId" align="center">
+        <form action="/donor" method="POST">
           <label for="BloodType">Blood Type:</label>
           <select style="margin-bottom: 10px;
           margin-top: 10px;
@@ -48,12 +46,42 @@
             <option value="O+">O+</option>
             <option value="O-">O-</option>
           </select>
-          <label for="phoneNumber"><b>Phone number: </b></label>
+          <label for="phoneNumber"><b>Your Phone number: </b></label>
           <input type="text" placeholder="Enter Phone Number" name="phoneNumber" required>
-          <label for="governmentName"><b>Government Name: </b></label>
-          <input type="text" placeholder="Enter Government Name" name="governmentName" required>
           <input type="submit" value="Submit" />
-          </div>
-        <% } %>
+        </div>
   </body>
+  <style>
+    input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#formId {
+  vertical-align: middle;
+  display:flexbox;
+  padding-top: 10%;
+
+}
+  </style>
 </html>
