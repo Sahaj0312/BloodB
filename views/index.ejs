@@ -30,14 +30,14 @@
       </nav>
       <% if(isAuthenticated) { %>
         <div align="center">
-        <form action="#">
+        <form action="/thankYou" method="POST">
           <label for="BloodType">Blood Type:</label>
           <select style="margin-bottom: 10px;
           margin-top: 10px;
           outline: 0;
           color: black;
           padding: 4px;
-          border-radius: 9px;" id="bloodType">
+          border-radius: 9px;" name="bloodType" id="bloodType">
             <option value="select">Select a BloodType</option>
             <option value="A+">A+</option>
             <option value="A-">A-</option>
@@ -49,9 +49,11 @@
             <option value="O-">O-</option>
           </select>
           <label for="phoneNumber"><b>Phone number: </b></label>
-          <input type="text" placeholder="Enter Phone Number" name="" required>
+          <input type="text" placeholder="Enter Phone Number" name="phoneNumber" required>
+          <label for="governmentName"><b>Government Name: </b></label>
+          <input type="text" placeholder="Enter Government Name" name="governmentName" required>
           <input type="submit" value="Submit" />
-          <% } %>
-        </div>
+          </div>
+        <% } %>
   </body>
 </html>
