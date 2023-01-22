@@ -49,7 +49,11 @@ app.post('/donor', (req, res) => {
      to: '+12368623321'
    })
   .then(message => console.log(message.sid));
-  res.send({"status":"All suitable donors have been notified"});
+  // res.send({"status":"All suitable donors have been notified"});
+  res.render('notified.ejs', {
+        root: '\views', 
+        title: "BludBud", 
+        isAuthenticated: req.oidc.isAuthenticated()})
   });
 
 app.listen(3000, () => {
