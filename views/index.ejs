@@ -17,14 +17,16 @@
           </div>
           <ul class="nav navbar-nav ">
             <% if(!isAuthenticated) { %>
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="/">Home</a></li>
             <li><a href="/login/">Login</a></li>
             <% } else { %> 
             <li class="active"><a href="#">Home</a></li>
             <li><a href="/logout/">Logout</a></li>
             <% } %>
+            <li><a href="/donor">Request a Donor</a></li>
           </ul>
         </div>
+        
       </nav>
       <% if(isAuthenticated) { %>
         <div align="center">
@@ -35,7 +37,7 @@
           outline: 0;
           color: black;
           padding: 4px;
-          border-radius: 9px;" name="languages" id="lang">
+          border-radius: 9px;" id="bloodType">
             <option value="select">Select a BloodType</option>
             <option value="A+">A+</option>
             <option value="A-">A-</option>
