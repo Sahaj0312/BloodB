@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import internal from "stream";
 const { Schema, model } = mongoose;
 
 const userSchema = new Schema({
