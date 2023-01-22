@@ -24,8 +24,6 @@ app.get('/', (req, res) => {
         root: '\views', 
         title: "BludBud",
         isAuthenticated: req.oidc.isAuthenticated()})
-
-    
         
 });
 

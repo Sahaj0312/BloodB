@@ -3,6 +3,7 @@ import internal from "stream";
 const { Schema, model } = mongoose;
 
 const userSchema = new Schema({
+    userID: String,
     userFirstName: String,
     userLastName: String,
     userEmail: String,
